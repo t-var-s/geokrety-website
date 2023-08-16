@@ -63,7 +63,7 @@ jobs:
           cat website/app/languages/messages.po.txt
 
       - name: crowdin action
-        uses: crowdin/github-action@v1
+        uses: crowdin/github-action@1.5.1
         with:
           config: crowdin.yml
           project_id: 260106
