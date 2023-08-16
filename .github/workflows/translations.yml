@@ -58,6 +58,10 @@ jobs:
         run: |
           msgcat -o website/app/languages/messages.po.txt ${{ steps.vars.outputs.tmp_dir }}/messages.pot ${{ steps.vars.outputs.tmp_dir }}/smarty.pot
 
+      - name: DEBUG
+        run: |
+          cat website/app/languages/messages.po.txt
+
       - name: crowdin action
         uses: crowdin/github-action@v1
         with:
